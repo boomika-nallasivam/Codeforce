@@ -1,0 +1,30 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+int bea(int s){
+    int d1 = s%10;
+    d1/=10;
+    int d2 = s%10;
+    d2/=10;
+    int d3 = s%10;
+    d3/=10;
+    int d4 = s%10;
+    d4/=10;
+    if(d1!=d2 ||d1!=d3 ||d1!=d4 ||d2!=d3 ||d2!=d4 ||d3!=d4 ) return true;
+    return false;
+}
+
+int main() {
+    int s;
+    cin >> s;
+
+    while(true){
+        s++;
+        if(bea(s)){
+            cout << s;
+            break;
+        }
+    }
+
+    return 0;
+}
