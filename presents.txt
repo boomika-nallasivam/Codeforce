@@ -1,0 +1,21 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+    int s;
+    cin >> s;
+    
+    int p[101],ans[101];
+    
+    for(int i = 1 ; i<=s ; i++){
+        cin >> p[i];
+        ans[p[i]]=i;
+    }
+    for(int i = 1 ; i<=s ; i++){
+        cout << ans[i] << " ";
+    }
+
+    return 0;
+}
