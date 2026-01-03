@@ -15,7 +15,7 @@ int main(){
         for(char &c : a){
             if(c == 'p') c = 'q';
             else if(c == 'q') c = 'p';
-            // 'w' stays 'w'
+            
         }
 
         cout << a << "\n";
