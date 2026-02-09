@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long c;
+    cin >> n >> c;
+
+    vector<long long> t(n);
+    for (int i = 0; i < n; i++) {
+        cin >> t[i];
+    }
+
+    int count = 1; 
+
+    for (int i = 1; i < n; i++) {
+        if (t[i] - t[i - 1] <= c) {
+            count++;
+        } else {
+            count = 1; 
+        }
+    }
+
+    cout << count << "\n";
+    return 0;
+}
